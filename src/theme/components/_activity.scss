@@ -1,0 +1,72 @@
+@import "../variables/index";
+
+.app-activity {
+  position: relative;
+  flex: 0 0 50px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+
+  &--selected {
+    border-radius: 0 $app-button__border-radius $app-button__border-radius $app-button__border-radius !important;
+    border-left: 2px solid rgba(0, 0, 0, 0.5) !important;
+    border-top: 2px solid rgba(255, 255, 255, 0.5) !important;
+  }
+
+  &__tooltip {
+    position: absolute;
+    background: $activity__tooltip;
+    color: $activity__tooltip__text-color;
+    font-size: $title__font-size;
+    padding: $activity__tooltip__padding;
+    z-index: 999;
+    text-transform: capitalize;
+  }
+
+  &.dragging {
+    backface-visibility: hidden;
+    position: fixed;
+    z-index: 1000;
+
+    ::after {
+      width: 25px;
+      height: 25px;
+      border-left: 3px solid $activity__tooltip__text-color;
+      border-top: 3px solid $activity__tooltip__text-color;
+    }
+
+    * {
+      cursor: none !important;
+    }
+  }
+
+  &__context-options {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    background: $white;
+    z-index: 998;
+
+    hr {
+      margin: 0 !important;
+    }
+
+    .option {
+      padding: $app-input__gutter-padding;
+      color: $mine_shaft;
+      cursor: pointer;
+
+      i {
+        margin-right: $app-button__icon__margin-right;
+      }
+
+      &:hover {
+        color: $bahama_blue !important;
+        font-weight: bold !important;
+
+        &.warning--attention {
+          @extend .warning--red !optional;
+        }
+      }
+    }
+  }
+}

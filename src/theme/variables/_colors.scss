@@ -1,0 +1,74 @@
+// Base Colors
+$mine_shaft: #333333;
+$gull_gray: #9CADBC;
+$silver: #CCCCCC;
+$gallery: #EEEEEE;
+$white: #FFFFFF;
+$timber_green: #122926;
+$bahama_blue: #00659D;
+$pacific_blue: #0098C1;
+$curious_blue: #1BA7E5;
+$saffron: #F1BD30;
+$red_orange: #FF2E29;
+
+
+// Component Colors
+$app__text: $mine_shaft;
+
+$app_bar: $bahama_blue;
+$app_bar__text: $white;
+
+$modal_bar: $bahama_blue;
+$modal_bar__text: $white;
+
+$navigation_bar: $timber_green;
+$navigation_bar__text: $gull_gray;
+$navigation_bar__text--active: $white;
+
+$tab-view: $gallery;
+$tab-view__tab__header: none;
+$tab-view__tab__header__text: $mine_shaft;
+$tab-view__tab--active__header: $white;
+$tab-view__tab--active__header__text: $mine_shaft;
+$tab-view__tab__content: $white;
+$tab-view__tab__content__text: $mine_shaft;
+
+$grid__backdrop: $gallery;
+$grid__heading: $gallery;
+$grid__border: $silver;
+
+$icon--help: $curious_blue;
+$icon--delete: $red_orange;
+$icon--warning: $saffron;
+
+$input_border: $silver;
+$input_border--invalid: $red_orange;
+$input_icon: $mine_shaft;
+$input-dropdown__hover-background: $gallery;
+
+$button--cta: $pacific_blue;
+$button--cta__text: $white;
+$button--negative: $white;
+$button--negative__text: $mine_shaft;
+$button--muted: $silver;
+$button--muted__text: $mine_shaft;
+$button--destroy: $white;
+$button--destroy__text: $red_orange;
+
+$notifications__border: $silver;
+
+$activity__tooltip: $gallery;
+$activity__tooltip__text-color: $mine_shaft;
+
+// Export theme colors for TypeScript
+:export {
+  textColor: $app__text;
+  primaryColor: $bahama_blue;
+  secondaryColor: $pacific_blue;
+  menuColor: $timber_green;
+  menuAccent: $gull_gray;
+  buttonNegativeBg: $button--negative;
+  buttonNegativeText: $button--negative__text;
+  buttonMutedBg: $button--muted;
+  buttonMutedText: $button--muted__text;
+}

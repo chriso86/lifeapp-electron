@@ -1,0 +1,54 @@
+@import "../variables/index";
+
+.app-button {
+  font-size: $title__font-size;
+  text-transform: capitalize;
+  padding: $app-button__padding;
+  border: none;
+  border-radius: $app-button__border-radius;
+  cursor: pointer;
+  min-width: 220px;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &.icon-only {
+    font-size: $app-button__icon-only__font-size;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+  }
+
+  &.margin-right {
+    i {
+      margin-right: $app-button__icon__margin-right;
+    }
+  }
+
+  &__cta {
+    background: $button--cta;
+    color: $button--cta__text;
+  }
+
+  &__negative {
+    background: $button--negative;
+    color: $button--negative__text;
+  }
+
+  &__destroy {
+    background: $button--destroy;
+    color: $button--destroy__text;
+  }
+
+  &__inverse-destroy {
+    background: $button--destroy__text;
+    color: $button--destroy;
+  }
+
+  &__muted {
+    background: $button--muted;
+    color: $button--muted__text;
+  }
+}

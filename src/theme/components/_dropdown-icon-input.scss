@@ -1,0 +1,73 @@
+@import "../variables/index";
+
+.app-dropdown-icon-input {
+  position: relative;
+  padding-right: $app-input__gutter-padding;
+
+  &__label {
+    font-size: $content__font-size;
+
+    span {
+      display: block;
+      padding: $app-input__label-padding;
+    }
+  }
+
+  &__selection {
+    position: relative;
+    width: 100%;
+    padding: $app-input-dropdown__padding;
+    font-size: $title__font-size;
+    border: 1px solid $input_border;
+    border-radius: $app-input__border-radius;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-align: right;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    i:last-of-type {
+      position: absolute;
+      font-size: $content__font-size;
+      right: $app-input__utility-icon-position-offset;
+      top: $app-input__utility-icon-position-offset;
+    }
+
+    &--invalid {
+      border-color: $input_border--invalid;
+    }
+  }
+
+  &__no-options {
+    font-size: $content__font-size;
+    color: $silver;
+  }
+
+  &__options {
+    position: absolute;
+    background: $white;
+    top: 73px;
+    left: 0;
+    right: $app-padding;
+    font-size: $title__font-size;
+    border: 1px solid $input_border;
+    border-top: none !important;
+    border-radius: $app-input__border-radius;
+    box-sizing: border-box;
+    z-index: 99999;
+    max-height: 200px;
+    overflow-y: auto;
+
+    &__option {
+      padding: $app-input-text__padding;
+      cursor: pointer;
+      text-align: center;
+
+      &:hover {
+        background: $input-dropdown__hover-background;
+      }
+    }
+  }
+}

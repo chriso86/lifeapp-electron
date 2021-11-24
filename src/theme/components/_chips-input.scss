@@ -1,0 +1,87 @@
+@import "../variables/index";
+
+.app-chips-input {
+  width: 100%;
+  position: relative;
+  padding-right: $app-input__gutter-padding $app-input__gutter-padding $app-input__gutter-padding 0;
+
+  &__label {
+    font-size: $content__font-size;
+
+    span {
+      display: block;
+      padding: $app-input__label-padding;
+    }
+  }
+
+  &__add {
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    font-size: $title__font-size;
+    cursor: pointer;
+    position: relative;
+  }
+
+  &__chips {
+
+  }
+
+  &__chip {
+    position: relative;
+    display: inline-flex;
+    margin: 0 10px 10px 0;
+    padding: $app-input-dropdown__padding;
+    font-size: $title__font-size;
+    border: 1px solid $input_border;
+    border-radius: $app-input__border-radius;
+    box-sizing: border-box;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    i {
+      margin-right: 10px;
+    }
+
+    &-clear {
+      margin: 0 !important;
+      position: absolute;
+      right: 10px;
+      cursor: pointer;
+    }
+
+    &--invalid {
+      border-color: $input_border--invalid;
+    }
+  }
+
+  &__no-options {
+    font-size: $content__font-size;
+    color: $silver;
+  }
+
+  &__options {
+    position: absolute;
+    background: $white;
+    top: 40px;
+    left: 0;
+    font-size: $title__font-size;
+    border: 1px solid $input_border;
+    border-top: none !important;
+    border-radius: $app-input__border-radius;
+    box-sizing: border-box;
+    z-index: 99999;
+    max-height: 200px;
+    overflow-y: auto;
+
+    &__option {
+      padding: $app-input-text__padding;
+      cursor: pointer;
+
+      &:hover {
+        background: $input-dropdown__hover-background;
+      }
+    }
+  }
+}

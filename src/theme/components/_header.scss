@@ -1,0 +1,42 @@
+@import "../variables/index";
+
+.app-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 0 0 $app-header-height;
+
+  padding-left: $app-padding;
+  background-color: $app_bar;
+  color: $app_bar__text;
+  font-size: $title__font-size;
+
+  // Title bar draggable overrides
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+
+  &__title {
+
+  }
+
+  &__buttons {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+
+    button {
+      background: none;
+      color: $app_bar__text;
+      border: none;
+      font-size: $title__font-size;
+      padding-right: $app-padding;
+      cursor: pointer;
+
+      -webkit-app-region: no-drag;
+
+      &:focus {
+        outline: 0;
+      }
+    }
+  }
+}

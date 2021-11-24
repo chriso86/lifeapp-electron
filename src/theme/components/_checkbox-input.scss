@@ -1,0 +1,39 @@
+@import "../variables/index";
+
+.app-checkbox-input {
+  padding-right: $app-input__gutter-padding;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  min-width: 215px;
+
+  &__label {
+    font-size: $title__font-size;
+    padding: 0 $app-padding;
+    height: 40px;
+
+    span {
+      display: block;
+      padding: $app-input__label-padding;
+    }
+  }
+
+  &__selection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $app-input-checkbox__width;
+    height: $app-input-checkbox__width;
+    border: 1px solid $input_border;
+    border-radius: $app-input__border-radius;
+    cursor: pointer;
+
+    i {
+      font-size: $app-input-checkbox__font-size;
+    }
+
+    &--invalid {
+      border-color: $input_border--invalid;
+    }
+  }
+}

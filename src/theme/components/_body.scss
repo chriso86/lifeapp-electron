@@ -1,0 +1,74 @@
+@import "../variables/index";
+
+body {
+  font-family: $font-family;
+  overflow: hidden;
+  color: $app__text;
+  background: $tab-view;
+
+  // Disable all drag selection (except for inputs)
+  * {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+  }
+
+  input {
+    -webkit-touch-callout: default !important; /* iOS Safari */
+    -webkit-user-select: text !important; /* Safari */
+    -khtml-user-select: default !important; /* Konqueror HTML */
+    -moz-user-select: text !important; /* Old versions of Firefox */
+    -ms-user-select: text !important; /* Internet Explorer/Edge */
+    user-select: text !important; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+  }
+
+  hr {
+    background: $silver !important;
+    border-color: $silver !important;
+    color: $silver !important;
+    height: 1px;
+    margin: 15px 0;
+    border: none;
+  }
+
+  h4 {
+    font-size: $content__font-size;
+    margin: 0 0 10px 0;
+    font-weight: normal;
+  }
+
+  .warning-text {
+    color: $icon--warning;
+    margin-right: 10px;
+  }
+
+  .warning {
+    font-weight: bold;
+
+    &--attention {
+      font-weight: bold !important;
+      color: $saffron !important;
+    }
+
+    &--red {
+      font-weight: bold !important;
+      color: $red_orange !important;
+    }
+  }
+
+  .hidden-text {
+    color: transparent !important;
+  }
+
+  .margin-right {
+    margin-right: 15px;
+  }
+
+  .overflow-scroll {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}

@@ -1,0 +1,49 @@
+@import "../variables/index";
+
+.app-tab-view {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 100%;
+  height: 100vh;
+
+  background: $tab-view;
+
+  // Elements
+  &__tab {
+    flex-direction: column;
+
+    &.no-mouse-cursor {
+      cursor: none !important;
+
+      * {
+        cursor: none !important;
+      }
+    }
+
+    // Elements
+    &__header {
+      position: relative;
+      top: 0;
+      background: $tab-view__tab__header;
+      color: $tab-view__tab__header__text;
+      padding: $tab-view__header__padding;
+      font-size: $title__font-size;
+      cursor: pointer;
+
+      &--active {
+        background: $tab-view__tab--active__header;
+        color: $tab-view__tab--active__header__text;
+      }
+    }
+
+    &__content {
+      position: absolute;
+      left: $app-main-menu-width;
+      height: calc(100% - #{($app-header-height + ($app-tab-view__content__padding * 2)) + 43});
+      width: calc(100% - #{($app-main-menu-width + ($app-tab-view__content__padding * 2))}); // 43 for tab header
+      background: $tab-view__tab__content;
+      color: $tab-view__tab__content__text;
+      padding: $app-tab-view__content__padding;
+    }
+  }
+}

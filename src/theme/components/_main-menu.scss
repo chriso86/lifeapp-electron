@@ -1,0 +1,33 @@
+@import "../variables/index";
+
+.app-main-menu {
+  background: $navigation_bar;
+  flex: 0 0 $app-main-menu-width;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    color: $navigation_bar__text;
+    font-size: $content__font-size;
+    text-transform: capitalize;
+    padding: $app-padding 0 ($app-padding / 2) 0;
+    text-align: center;
+    cursor: pointer;
+
+    i {
+      font-size: $menu-item__icon__font-size;
+    }
+
+    &--active {
+      color: $navigation_bar__text--active;
+    }
+
+    &__title {
+      i {
+        margin-bottom: ($app-padding / 2);
+      }
+
+      text-align: center;
+    }
+  }
+}
